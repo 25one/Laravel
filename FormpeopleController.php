@@ -16,6 +16,7 @@ class FormpeopleController extends Controller
 
     public function index(Request $request)
     {
+
         if(Input::get('save')) {
            $validator=$this->formpeople->rules($request);
            if(!$validator->fails()) {
@@ -45,4 +46,5 @@ class FormpeopleController extends Controller
            return view('formpeople/formpeople', ['results'=>$results]);
         }
     }
+
 }
